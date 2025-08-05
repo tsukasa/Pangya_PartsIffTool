@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B6D13173-5937-4D4E-9834-BE7F44141B9C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PartsIffTool</RootNamespace>
+    <AssemblyName>PartsIffTool</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Dolfini.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GoogleTranslateAPI, Version=0.4.0.133, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\External\GoogleTranslateAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\External\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseObject.cs" />
+    <Compile Include="CaddieRecord.cs" />
+    <Compile Include="CardEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardEditor.Designer.cs">
+      <DependentUpon>CardEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardRecord.cs" />
+    <Compile Include="ClubRecord.cs" />
+    <Compile Include="ClubSetEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClubSetEditor.Designer.cs">
+      <DependentUpon>ClubSetEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClubSetRecord.cs" />
+    <Compile Include="ColumnsSorter.cs" />
+    <Compile Include="DatEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatEditor.Designer.cs">
+      <DependentUpon>DatEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DescEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DescEditor.Designer.cs">
+      <DependentUpon>DescEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DescRecord.cs" />
+    <Compile Include="DlgShopPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgShopPrice.Designer.cs">
+      <DependentUpon>DlgShopPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IffDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IffDoctor.Designer.cs">
+      <DependentUpon>IffDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureAbilityRecord.cs" />
+    <Compile Include="FurnitureEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FurnitureEditor.Designer.cs">
+      <DependentUpon>FurnitureEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureRecord.cs" />
+    <Compile Include="GenericDumper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenericDumper.Designer.cs">
+      <DependentUpon>GenericDumper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiveItemWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiveItemWindow.Designer.cs">
+      <DependentUpon>GiveItemWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IffCommonMethods.cs" />
+    <Compile Include="IffFile.cs" />
+    <Compile Include="LocaleString.cs" />
+    <Compile Include="Native.cs" />
+    <Compile Include="PakDataCopier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PakDataCopier.Designer.cs">
+      <DependentUpon>PakDataCopier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramConfiguration.cs" />
+    <Compile Include="IffItemCommon.cs" />
+    <Compile Include="PartEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartEditor.Designer.cs">
+      <DependentUpon>PartEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartsRecord.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressIndicator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressIndicator.Designer.cs">
+      <DependentUpon>ProgressIndicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectGTableEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectGTableEditor.Designer.cs">
+      <DependentUpon>ProjectGTableEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardEditor.resx">
+      <DependentUpon>CardEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClubSetEditor.resx">
+      <DependentUpon>ClubSetEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatEditor.resx">
+      <DependentUpon>DatEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DescEditor.resx">
+      <DependentUpon>DescEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgShopPrice.resx">
+      <DependentUpon>DlgShopPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenericDumper.resx">
+      <DependentUpon>GenericDumper.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiveItemWindow.resx">
+      <DependentUpon>GiveItemWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IffDoctor.resx">
+      <DependentUpon>IffDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PakDataCopier.resx">
+      <DependentUpon>PakDataCopier.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartEditor.resx">
+      <DependentUpon>PartEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressIndicator.resx">
+      <DependentUpon>ProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectGTableEditor.resx">
+      <DependentUpon>ProjectGTableEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinEditor.resx">
+      <DependentUpon>SkinEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartupWindow.resx">
+      <DependentUpon>StartupWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StringTableEditor.resx">
+      <DependentUpon>StringTableEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SetItemRecord.cs" />
+    <Compile Include="SkinEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkinEditor.Designer.cs">
+      <DependentUpon>SkinEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinRecord.cs" />
+    <Compile Include="StartupWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartupWindow.Designer.cs">
+      <DependentUpon>StartupWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StringTableEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StringTableEditor.Designer.cs">
+      <DependentUpon>StringTableEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wildcard.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dolfini.ico" />
+    <None Include="Resources\ajax-loader.gif" />
+    <None Include="Resources\bullet_go.png" />
+    <None Include="Resources\book_previous.png" />
+    <None Include="Resources\Dolfini.ico" />
+    <None Include="Resources\bullet_arrow_down.png" />
+    <Content Include="Resources\item_no_preview.png" />
+    <None Include="Resources\item_no_preview1.png" />
+    <Content Include="Resources\item_preview_bg.png" />
+    <None Include="Resources\wand.png" />
+    <None Include="Resources\tag_blue.png" />
+    <None Include="Resources\textfield_key.png" />
+    <None Include="Resources\item_preview_bg1.png" />
+    <None Include="Resources\bricks.png" />
+    <None Include="Resources\arrow_join.png" />
+    <None Include="Resources\box.png" />
+    <None Include="Resources\arrow_merge.png" />
+    <None Include="Resources\cart_add.png" />
+    <None Include="Resources\bullet_arrow_up.png" />
+    <None Include="Resources\database_go.png" />
+    <None Include="Resources\database_save.png" />
+    <None Include="Resources\database_edit.png" />
+    <None Include="Resources\database_add.png" />
+    <None Include="Resources\zoom.png" />
+    <None Include="Resources\tick.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\arrow_undo.png" />
+    <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
